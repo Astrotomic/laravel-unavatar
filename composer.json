@@ -49,7 +49,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Astrotomic\\LaravelUnavatar\\LaravelUnavatarServiceProvider"
+                "Astrotomic\\LaravelUnavatar\\UnavatarServiceProvider"
             ]
         }
     }
