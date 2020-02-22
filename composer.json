@@ -50,10 +50,7 @@
         "laravel": {
             "providers": [
                 "Astrotomic\\LaravelUnavatar\\LaravelUnavatarServiceProvider"
-            ],
-            "aliases": {
-                "LaravelUnavatar": "Astrotomic\\LaravelUnavatar\\LaravelUnavatarFacade"
-            }
+            ]
         }
     }
 }
