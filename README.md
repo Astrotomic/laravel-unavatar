@@ -16,6 +16,7 @@ You can install the package via composer:
 
 ```bash
 composer require astrotomic/laravel-unavatar
+php artisan vendor:publish --provider="Astrotomic\LaravelUnavatar\UnavatarServiceProvider" --tag=config
 ```
 
 ## Usage
