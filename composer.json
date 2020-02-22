@@ -1,0 +1,59 @@
+{
+    "name": "astrotomic/laravel-unavatar",
+    "description": "Laravel integration of unavatar service.",
+    "keywords": [
+        "astrotomic",
+        "laravel-unavatar",
+        "laravel",
+        "unavatar",
+        "avatar"
+    ],
+    "homepage": "https://github.com/Astrotomic/laravel-unavatar",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tom Witkowski",
+            "email": "dev.gummibeer@gmail.com",
+            "homepage": "https://gummibeer.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "astrotomic/php-unavatar": "^0.1.0",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Astrotomic\\LaravelUnavatar\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Astrotomic\\LaravelUnavatar\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Astrotomic\\LaravelUnavatar\\LaravelUnavatarServiceProvider"
+            ],
+            "aliases": {
+                "LaravelUnavatar": "Astrotomic\\LaravelUnavatar\\LaravelUnavatarFacade"
+            }
+        }
+    }
+}
