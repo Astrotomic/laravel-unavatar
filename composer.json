@@ -1,5 +1,6 @@
 {
     "name": "astrotomic/laravel-unavatar",
+    "type": "library",
     "description": "Laravel integration of unavatar service.",
     "keywords": [
         "astrotomic",
@@ -8,17 +9,16 @@
         "unavatar",
         "avatar"
     ],
-    "type": "library",
-  "homepage": "https://astrotomic.info",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Tom Witkowski",
-      "email": "gummibeer@astrotomic.info",
-      "homepage": "https://gummibeer.de",
-      "role": "Developer"
-    }
-  ],
+    "homepage": "https://astrotomic.info",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Witkowski",
+            "email": "gummibeer@astrotomic.info",
+            "homepage": "https://gummibeer.de",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^7.1",
         "astrotomic/php-unavatar": "^0.1.0",
@@ -27,6 +27,16 @@
     "require-dev": {
         "orchestra/testbench": "^4.0",
         "phpunit/phpunit": "^8.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Astrotomic\\LaravelUnavatar\\UnavatarServiceProvider"
+            ]
+        }
     },
     "autoload": {
         "psr-4": {
@@ -41,21 +51,10 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Astrotomic\\LaravelUnavatar\\UnavatarServiceProvider"
-            ]
-        }
-    },
-  "support": {
-    "email": "dev@astrotomic.info",
-    "issues": "https://github.com/Astrotomic/laravel-unavatar/issues",
-    "source": "https://github.com/Astrotomic/laravel-unavatar"
-  }
+    "support": {
+        "email": "dev@astrotomic.info",
+        "issues": "https://github.com/Astrotomic/laravel-unavatar/issues",
+        "source": "https://github.com/Astrotomic/laravel-unavatar"
+    }
 }
