@@ -1,4 +1,4 @@
-# PHP Unavatar
+# Laravel Unavatar
 
 [![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-unavatar.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-unavatar)
 [![MIT License](https://img.shields.io/github/license/Astrotomic/laravel-unavatar.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-unavatar/blob/master/LICENSE)
