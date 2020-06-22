@@ -24,19 +24,20 @@ php artisan vendor:publish --provider="Astrotomic\LaravelUnavatar\UnavatarServic
 Most of the logic and possibilities is inherited from the [astrotomic/php-unavatar](https://github.com/Astrotomic/php-unavatar) base package.
 On top this package adds some Laravel specific possibilities.
 The `\Astrotomic\LaravelUnavatar\Unavatar` class implements several interfaces:
-* `\Illuminate\Contracts\Support\Renderable`
-* `\Illuminate\Contracts\Support\Responsable`
-* `\Illuminate\Contracts\Support\Htmlable`
-* `\Illuminate\Contracts\Support\Jsonable`
-* `\JsonSerializable`
-* `\Illuminate\Contracts\Support\Arrayable`
+
+- `\Illuminate\Contracts\Support\Renderable`
+- `\Illuminate\Contracts\Support\Responsable`
+- `\Illuminate\Contracts\Support\Htmlable`
+- `\Illuminate\Contracts\Support\Jsonable`
+- `\JsonSerializable`
+- `\Illuminate\Contracts\Support\Arrayable`
 
 So you can use the use your `Unavatar` instances in your controllers as response but for sure also in your views.
 The last three ones will use the [unavatar](https://unavatar.now.sh) JSON API - so they will start a HTTP request.
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
