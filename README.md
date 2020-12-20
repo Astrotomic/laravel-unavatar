@@ -41,12 +41,12 @@ The last three ones will use the [unavatar](https://unavatar.now.sh) JSON API - 
 The package provides a blade component you can use in your views.
 
 ```html
-<x-unavatar::img :email="$user->email" :alt="$user->name"/>
+<x-unavatar::img :email="$user->email" :alt="$user->name" />
 
 <img
-    src="https://unavatar.now.sh/gummibeer@astrotomic.info"
-    alt="Gummibeer"
-    loading="lazy"
+  src="https://unavatar.now.sh/gummibeer@astrotomic.info"
+  alt="Gummibeer"
+  loading="lazy"
 />
 ```
 
