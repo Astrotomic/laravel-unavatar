@@ -2,10 +2,8 @@
 
 namespace Astrotomic\Unavatar\Laravel;
 
-use Astrotomic\Unavatar\Laravel\View\Components\Img as UnavatarComponent;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\View\Factory;
 
 class UnavatarServiceProvider extends ServiceProvider
 {

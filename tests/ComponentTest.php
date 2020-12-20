@@ -2,17 +2,6 @@
 
 namespace Astrotomic\LaravelUnavatar\Tests;
 
-use Astrotomic\Unavatar\Laravel\Unavatar;
-use Astrotomic\Unavatar\Laravel\UnavatarServiceProvider;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\Support\Jsonable;
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Contracts\Support\Responsable;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-
 final class ComponentTest extends TestCase
 {
     /** @test */

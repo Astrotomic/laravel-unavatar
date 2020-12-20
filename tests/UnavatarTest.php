@@ -3,7 +3,6 @@
 namespace Astrotomic\LaravelUnavatar\Tests;
 
 use Astrotomic\Unavatar\Laravel\Unavatar;
-use Astrotomic\Unavatar\Laravel\UnavatarServiceProvider;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Jsonable;

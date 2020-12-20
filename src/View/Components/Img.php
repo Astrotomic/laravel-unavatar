@@ -31,8 +31,7 @@ class Img extends Component
         ?string $telegram = null,
         ?string $twitter = null,
         ?string $youtube = null
-    )
-    {
+    ) {
         if ($clearbit) {
             $this->identifier = $clearbit;
             $this->provider = BaseUnavatar::PROVIDER_CLEARBIT;
@@ -110,7 +109,7 @@ class Img extends Component
     {
         $unavatar = LaravelUnavatar::make($this->identifier, $this->provider);
 
-        if($this->fallback) {
+        if ($this->fallback) {
             $unavatar->fallback($this->fallback);
         }
 
