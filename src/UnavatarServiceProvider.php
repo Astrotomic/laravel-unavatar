@@ -1,7 +1,9 @@
 <?php
 
-namespace Astrotomic\LaravelUnavatar;
+namespace Astrotomic\Unavatar\Laravel;
 
+use Astrotomic\Unavatar\Laravel\View\Components\Img as UnavatarComponent;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Factory;
 
@@ -13,13 +15,19 @@ class UnavatarServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('unavatar.php'),
             ], 'config');
+
+            $this->publishes([
+                __DIR__.'/../resources/views' => resource_path('views/vendor/unavatar'),
+            ], 'views');
         }
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'unavatar');
+
+        Blade::componentNamespace('Astrotomic\Unavatar\Laravel\View\Components', 'unavatar');
     }
 
     public function register(): void
     {
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'unavatar');
-
-        $this->app->singleton(Factory::class);
     }
 }

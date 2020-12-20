@@ -2,8 +2,8 @@
 
 namespace Astrotomic\LaravelUnavatar\Tests;
 
-use Astrotomic\LaravelUnavatar\Unavatar;
-use Astrotomic\LaravelUnavatar\UnavatarServiceProvider;
+use Astrotomic\Unavatar\Laravel\Unavatar;
+use Astrotomic\Unavatar\Laravel\UnavatarServiceProvider;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Jsonable;
@@ -12,17 +12,9 @@ use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Orchestra\Testbench\TestCase;
 
 final class UnavatarTest extends TestCase
 {
-    protected function getPackageProviders($app): array
-    {
-        return [
-            UnavatarServiceProvider::class,
-        ];
-    }
-
     /** @test */
     public function it_is_renderable(): void
     {

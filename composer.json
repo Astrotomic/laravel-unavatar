@@ -23,11 +23,13 @@
         "php": "^7.4 || ^8.0",
         "ext-json": "*",
         "astrotomic/php-unavatar": "^0.2.0",
-        "illuminate/support": "^6.0 || ^7.0 || ^8.0"
+        "illuminate/support": "^7.0 || ^8.0",
+        "illuminate/view": "^7.0 || ^8.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
-        "phpunit/phpunit": "^8.0 || ^9.0"
+        "gajus/dindent": "^2.0",
+        "orchestra/testbench": "^5.0 || ^6.0",
+        "phpunit/phpunit": "^9.3"
     },
     "config": {
         "sort-packages": true
@@ -41,7 +43,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Astrotomic\\LaravelUnavatar\\": "src"
+            "Astrotomic\\Unavatar\\Laravel\\": "src"
         }
     },
     "autoload-dev": {
