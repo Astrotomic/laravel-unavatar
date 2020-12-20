@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrotomic\LaravelUnavatar\Tests;
+namespace Astrotomic\Unavatar\Laravel\Tests;
 
 final class ComponentTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrotomic\LaravelUnavatar\Tests;
+namespace Astrotomic\Unavatar\Laravel\Tests;
 
 use Astrotomic\Unavatar\Laravel\Unavatar;
 use Illuminate\Contracts\Support\Arrayable;

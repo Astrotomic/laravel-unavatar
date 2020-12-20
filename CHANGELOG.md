@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-unavatar` will be documented in this file
 
+## 0.2.1 - 2020-12-20
+
+- fix namespace
+
 ## 0.2.0 - 2020-12-20
 
 - add Laravel 8 support

@@ -37,7 +37,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Astrotomic\\LaravelUnavatar\\UnavatarServiceProvider"
+                "Astrotomic\\Unavatar\\Laravel\\UnavatarServiceProvider"
             ]
         }
     },
@@ -48,7 +48,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Astrotomic\\LaravelUnavatar\\Tests\\": "tests"
+            "Astrotomic\\Unavatar\\Laravel\\Tests\\": "tests"
         }
     },
     "scripts": {
