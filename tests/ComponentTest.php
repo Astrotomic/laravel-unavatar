@@ -21,12 +21,12 @@ final class ComponentTest extends TestCase
         $expected = <<<'HTML'
             <img
                 src="https://unavatar.now.sh/astrotomic.info"
-                alt="astrotomic.info avatar"
+                alt="Astrotomic avatar"
                 loading="lazy"
             />
             HTML;
 
-        $this->assertComponentRenders($expected, '<x-unavatar::img domain="astrotomic.info"/>');
+        $this->assertComponentRenders($expected, '<x-unavatar::img domain="astrotomic.info" alt="Astrotomic avatar"/>');
     }
 
     /** @test */

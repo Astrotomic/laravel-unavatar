@@ -36,6 +36,22 @@ The `\Astrotomic\LaravelUnavatar\Unavatar` class implements several interfaces:
 So you can use the use your `Unavatar` instances in your controllers as response but for sure also in your views.
 The last three ones will use the [unavatar](https://unavatar.now.sh) JSON API - so they will start a HTTP request.
 
+### Blade Component
+
+The package provides a blade component you can use in your views.
+
+```html
+<x-unavatar::img :email="$user->email" :alt="$user->name"/>
+
+<img
+    src="https://unavatar.now.sh/gummibeer@astrotomic.info"
+    alt="Gummibeer"
+    loading="lazy"
+/>
+```
+
+You can also publish the used view and customize it.
+
 ### Testing
 
 ```bash
