@@ -27,7 +27,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "ext-json": "*",
-        "astrotomic/php-unavatar": "^0.2.0",
+        "astrotomic/php-unavatar": "^0.2.0 || ^0.3.0",
         "illuminate/support": "^8.0 || ^9.0",
         "illuminate/view": "^8.0 || ^9.0"
     },
