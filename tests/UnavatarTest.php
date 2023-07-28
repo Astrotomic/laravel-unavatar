@@ -20,7 +20,7 @@ final class UnavatarTest extends TestCase
         $unavatar = Unavatar::github('Gummibeer');
 
         static::assertArrayHasKey(Renderable::class, class_implements($unavatar));
-        static::assertSame('<img alt="Gummibeer\'s github avatar" src="https://unavatar.now.sh/github/Gummibeer" />', $unavatar->render());
+        static::assertSame('<img alt="Gummibeer\'s github avatar" src="https://unavatar.io/github/Gummibeer" />', $unavatar->render());
     }
 
     /** @test */
@@ -29,7 +29,7 @@ final class UnavatarTest extends TestCase
         $unavatar = Unavatar::github('Gummibeer');
 
         static::assertArrayHasKey(Htmlable::class, class_implements($unavatar));
-        static::assertSame('<img alt="Gummibeer\'s github avatar" src="https://unavatar.now.sh/github/Gummibeer" />', $unavatar->toHtml());
+        static::assertSame('<img alt="Gummibeer\'s github avatar" src="https://unavatar.io/github/Gummibeer" />', $unavatar->toHtml());
     }
 
     /** @test */
@@ -42,7 +42,7 @@ final class UnavatarTest extends TestCase
         $redirect = $unavatar->toResponse(Request::createFromGlobals());
 
         static::assertInstanceOf(RedirectResponse::class, $redirect);
-        static::assertSame('https://unavatar.now.sh/github/Gummibeer', $redirect->getTargetUrl());
+        static::assertSame('https://unavatar.io/github/Gummibeer', $redirect->getTargetUrl());
     }
 
     /** @test */
