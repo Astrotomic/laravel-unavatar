@@ -47,9 +47,6 @@
             "Astrotomic\\Unavatar\\Laravel\\Tests\\": "tests"
         }
     },
-    "config": {
-        "sort-packages": true
-    },
     "extra": {
         "laravel": {
             "providers": [
