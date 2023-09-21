@@ -16,12 +16,9 @@ jobs:
       - name: Validate Composer configuration
         run: composer validate --strict
 
-      # - name: Run composer normalize
-      #   uses: docker://ergebnis/composer-normalize-action:latest
       - name: Normalize composer.json
         run: |
           composer global require ergebnis/composer-normalize
-          # composer normalize
           composer normalize --indent-style=space --indent-size=4 --no-check-lock --no-update-lock --no-interaction --ansi
 
       - uses: stefanzweifel/git-auto-commit-action@v4.0.0
