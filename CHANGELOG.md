@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-unavatar` will be documented in this file
 
+## 0.5.0 - 2023-07-28
+
+- add Laravel 10 support
+- drop Laravel 8 support
+
 ## 0.3.0 - 2022-04-08
 
 - add Laravel 9 support

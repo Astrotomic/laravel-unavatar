@@ -9,7 +9,7 @@ final class ComponentTest extends TestCase
     {
         $expected = <<<'HTML'
             <img
-                src="https://unavatar.now.sh/astrotomic.info"
+                src="https://unavatar.io/astrotomic.info"
                 alt="Astrotomic avatar"
                 loading="lazy"
             />
@@ -23,7 +23,7 @@ final class ComponentTest extends TestCase
     {
         $expected = <<<'HTML'
             <img
-                src="https://unavatar.now.sh/astrotomic.info/?fallback=https%3A%2F%2Fexample.com%2Favatar.jpg"
+                src="https://unavatar.io/astrotomic.info/?fallback=https%3A%2F%2Fexample.com%2Favatar.jpg"
                 alt="astrotomic.info avatar"
                 loading="lazy"
             />
@@ -37,7 +37,7 @@ final class ComponentTest extends TestCase
     {
         $expected = <<<'HTML'
             <img
-                src="https://unavatar.now.sh/clearbit/astrotomic.info"
+                src="https://unavatar.io/clearbit/astrotomic.info"
                 alt="astrotomic.info avatar"
                 loading="lazy"
             />
@@ -51,7 +51,7 @@ final class ComponentTest extends TestCase
     {
         $expected = <<<'HTML'
             <img
-                src="https://unavatar.now.sh/deviantart/astrotomic"
+                src="https://unavatar.io/deviantart/astrotomic"
                 alt="astrotomic avatar"
                 loading="lazy"
             />
@@ -65,7 +65,7 @@ final class ComponentTest extends TestCase
     {
         $expected = <<<'HTML'
             <img
-                src="https://unavatar.now.sh/dribbble/astrotomic"
+                src="https://unavatar.io/dribbble/astrotomic"
                 alt="astrotomic avatar"
                 loading="lazy"
             />
