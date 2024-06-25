@@ -51,6 +51,10 @@
         "sort-packages": true
     },
     "extra": {
+        "composer-normalize": {
+            "indent-size": 4,
+            "indent-style": "space"
+        },
         "laravel": {
             "providers": [
                 "Astrotomic\\Unavatar\\Laravel\\UnavatarServiceProvider"
