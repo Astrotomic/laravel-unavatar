@@ -19,8 +19,8 @@ final class UnavatarTest extends TestCase
     {
         $unavatar = Unavatar::github('Gummibeer');
 
-        static::assertArrayHasKey(Renderable::class, class_implements($unavatar));
-        static::assertSame('<img alt="Gummibeer&#039;s github avatar" src="https://unavatar.io/github/Gummibeer" />', $unavatar->render());
+        self::assertArrayHasKey(Renderable::class, class_implements($unavatar));
+        self::assertSame('<img alt="'.htmlspecialchars('Gummibeer\'s github avatar').'" src="https://unavatar.io/github/Gummibeer" />', $unavatar->render());
     }
 
     /** @test */
@@ -28,8 +28,8 @@ final class UnavatarTest extends TestCase
     {
         $unavatar = Unavatar::github('Gummibeer');
 
-        static::assertArrayHasKey(Htmlable::class, class_implements($unavatar));
-        static::assertSame('<img alt="Gummibeer&#039;s github avatar" src="https://unavatar.io/github/Gummibeer" />', $unavatar->toHtml());
+        self::assertArrayHasKey(Htmlable::class, class_implements($unavatar));
+        self::assertSame('<img alt="'.htmlspecialchars('Gummibeer\'s github avatar').'" src="https://unavatar.io/github/Gummibeer" />', $unavatar->toHtml());
     }
 
     /** @test */
@@ -37,12 +37,12 @@ final class UnavatarTest extends TestCase
     {
         $unavatar = Unavatar::github('Gummibeer');
 
-        static::assertArrayHasKey(Responsable::class, class_implements($unavatar));
+        self::assertArrayHasKey(Responsable::class, class_implements($unavatar));
 
         $redirect = $unavatar->toResponse(Request::createFromGlobals());
 
-        static::assertInstanceOf(RedirectResponse::class, $redirect);
-        static::assertSame('https://unavatar.io/github/Gummibeer', $redirect->getTargetUrl());
+        self::assertInstanceOf(RedirectResponse::class, $redirect);
+        self::assertSame('https://unavatar.io/github/Gummibeer', $redirect->getTargetUrl());
     }
 
     /** @test */
@@ -50,16 +50,16 @@ final class UnavatarTest extends TestCase
     {
         $unavatar = Unavatar::github('Gummibeer');
 
-        static::assertArrayHasKey(Responsable::class, class_implements($unavatar));
+        self::assertArrayHasKey(Responsable::class, class_implements($unavatar));
 
         $request = Request::createFromGlobals();
         $request->headers->set('X-Requested-With', 'XMLHttpRequest');
         $response = $unavatar->toResponse($request);
 
-        static::assertInstanceOf(JsonResponse::class, $response);
+        self::assertInstanceOf(JsonResponse::class, $response);
         $data = $response->getData(true);
-        static::assertIsArray($data);
-        static::assertArrayHasKey('url', $data);
+        self::assertIsArray($data);
+        self::assertArrayHasKey('url', $data);
     }
 
     /** @test */
@@ -67,13 +67,13 @@ final class UnavatarTest extends TestCase
     {
         $unavatar = Unavatar::github('Gummibeer');
 
-        static::assertArrayHasKey(Jsonable::class, class_implements($unavatar));
+        self::assertArrayHasKey(Jsonable::class, class_implements($unavatar));
 
         $data = $unavatar->toJson();
-        static::assertJson($data);
+        self::assertJson($data);
         $data = json_decode($data, true);
-        static::assertIsArray($data);
-        static::assertArrayHasKey('url', $data);
+        self::assertIsArray($data);
+        self::assertArrayHasKey('url', $data);
     }
 
     /** @test */
@@ -81,11 +81,11 @@ final class UnavatarTest extends TestCase
     {
         $unavatar = Unavatar::github('Gummibeer');
 
-        static::assertArrayHasKey(Arrayable::class, class_implements($unavatar));
+        self::assertArrayHasKey(Arrayable::class, class_implements($unavatar));
 
         $data = $unavatar->toArray();
-        static::assertIsArray($data);
-        static::assertArrayHasKey('url', $data);
+        self::assertIsArray($data);
+        self::assertArrayHasKey('url', $data);
     }
 
     /** @test */
@@ -93,10 +93,10 @@ final class UnavatarTest extends TestCase
     {
         $unavatar = Unavatar::github('Gummibeer')->fallback('https://example.com/avatar.jpg');
 
-        static::assertArrayHasKey(Arrayable::class, class_implements($unavatar));
+        self::assertArrayHasKey(Arrayable::class, class_implements($unavatar));
 
         $data = $unavatar->toArray();
-        static::assertIsArray($data);
-        static::assertArrayHasKey('url', $data);
+        self::assertIsArray($data);
+        self::assertArrayHasKey('url', $data);
     }
 }

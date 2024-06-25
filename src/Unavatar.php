@@ -14,7 +14,7 @@ use Illuminate\Support\Str;
 use JsonSerializable;
 use Symfony\Component\HttpFoundation\Response;
 
-class Unavatar extends BaseUnavatar implements Renderable, Responsable, Htmlable, Jsonable, JsonSerializable, Arrayable
+class Unavatar extends BaseUnavatar implements Arrayable, Htmlable, Jsonable, JsonSerializable, Renderable, Responsable
 {
     public static function make(string $identifier, ?string $provider = null): self
     {

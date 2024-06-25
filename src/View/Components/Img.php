@@ -10,7 +10,9 @@ use Illuminate\View\Component;
 class Img extends Component
 {
     public string $identifier;
+
     protected ?string $provider = null;
+
     protected ?string $fallback = null;
 
     public function __construct(
